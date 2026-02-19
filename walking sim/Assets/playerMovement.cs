@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class playerMovement : MonoBehaviour
@@ -86,4 +87,27 @@ public class playerMovement : MonoBehaviour
 
         cC.Move((move + velocity) * Time.deltaTime);
     }
+
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        moveInput = context.ReadValue<Vector2>();
+    }
+
+    public void OnLook(InputAction.CallbackContext context) 
+    { 
+    
+    lookInput = context.ReadValue<Vector2>();
+    
+    }
+
+    public void onJump(InputAction.CallbackContext context)
+    {
+        if (context.performed) isJumping = true;
+    }
+    
+    public void onSprint(InputAction.CallbackContext context)
+    {
+        isRunning = context.ReadValueAsButton();
+    }
+
 }
