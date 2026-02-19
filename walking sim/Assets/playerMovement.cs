@@ -45,7 +45,19 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        handleMovement();
+        handleLook();
+    }
+    private void handleLook()
+    {
+
+        float yaw = lookInput.x *lookSensitivity;
+        float pitchDelta = lookInput.y *lookSensitivity;
+
+        transform.Rotate(Vector3.up * yaw);
+        pitch -= pitchDelta;
+        pitch = Mathf.Clamp(pitch, -90, -90);
+        cameraTransform.localRotation = Quaternion.Euler(pitch, 0,0);
     }
 
     private void handleMovement()
@@ -115,6 +127,11 @@ public class playerMovement : MonoBehaviour
     public void onInteract(InputAction.CallbackContext context)
     {
         if (context.performed) interactPressed = true;
+    }
+
+    public void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Debug.Log("Character Collided with:" + hit.gameObject.name);
     }
 
 }
