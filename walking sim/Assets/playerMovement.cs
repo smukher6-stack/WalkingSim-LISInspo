@@ -8,6 +8,9 @@ public class playerMovement : MonoBehaviour
     public float runSpeed = 7f;
     public float jumpHeight = 5f;
 
+    bool isRunning;
+    bool isJumping; 
+
     public Transform cameraTransform;
     public float lookSensitivity = 1f;
 
@@ -40,5 +43,47 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void handleMovement()
+    {
+        bool grounded = cC.isGrounded;
+        Debug.Log("is grounded" + grounded);
+
+        if(grounded && verticalVelocity <= 0f)
+        {
+
+            verticalVelocity = -2f;
+        }
+
+        float currentSpeed = walkSpeed;
+
+        if (isRunning)
+        {
+            currentSpeed = runSpeed;
+        }
+
+        else if(!isRunning) 
+        {
+            currentSpeed = walkSpeed;
+        }
+
+        Vector3 move = transform.right * moveInput.x * currentSpeed + transform.forward * moveInput.y * currentSpeed;
+
+        if(isJumping && grounded)
+        {
+
+            verticalVelocity = Mathf.Sqrt(f: jumpHeight * -2f * gravity);
+        }
+        else
+        {
+            isJumping = false;
+        }
+
+        verticalVelocity += gravity * Time.deltaTime;
+
+        Vector3 velocity = Vector3.up *verticalVelocity;
+
+        cC.Move((move + velocity) * Time.deltaTime);
     }
 }
