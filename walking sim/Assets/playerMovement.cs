@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.UI;
 using UnityEngine.UI;
 
 public class playerMovement : MonoBehaviour
@@ -10,7 +11,8 @@ public class playerMovement : MonoBehaviour
     public float jumpHeight = 5f;
 
     bool isRunning;
-    bool isJumping; 
+    bool isJumping;
+    bool interactPressed;
 
     public Transform cameraTransform;
     public float lookSensitivity = 1f;
@@ -108,6 +110,11 @@ public class playerMovement : MonoBehaviour
     public void onSprint(InputAction.CallbackContext context)
     {
         isRunning = context.ReadValueAsButton();
+    }
+
+    public void onInteract(InputAction.CallbackContext context)
+    {
+        if (context.performed) interactPressed = true;
     }
 
 }
