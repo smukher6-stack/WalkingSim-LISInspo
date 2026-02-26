@@ -13,8 +13,7 @@ public class playerMovement : MonoBehaviour
 
     bool isRunning;
     bool isJumping;
-    bool interactPressed;
-
+   
     public Transform cameraTransform;
     public float lookSensitivity = 1f;
 
@@ -31,6 +30,7 @@ public class playerMovement : MonoBehaviour
     private GameObject currentTarget;
     public Image reticleImage;
     private bool pressButton;
+    
 
     public static event Action<NPCData> OnDialogueReqested;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -113,13 +113,12 @@ public class playerMovement : MonoBehaviour
         //make a ray that goes straight out of the camera(center of screen)
         //players eyesight
         Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);
-        RaycastHit hit;
+       
         //asking unity if it hit something within 3 units
         //hit stores what we hit like the collider
-        bool didHit = Physics.Raycast(ray, out hit, 3);
-        if (!didHit) return;//if we didn't hit anything start here
+        
         //if we hit something tagged interactable
-        if (hit.collider.CompareTag("Interactable"))
+        if (Physics.Raycast(ray, out RaycastHit hit, 3f))
         {
             //store the object so we can destroy or do whatever when the player clicks
             currentTarget = hit.collider.gameObject;

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e139c25bfe2d63340b750059efb367ba, type: 3}
   m_Name: New NPC Data
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
-  displayName: 
-  placeHolderOpeningLine: 
+  displayName: hot dog man
+  placeHolderOpeningLine: ready for the mosh pit shakabrah

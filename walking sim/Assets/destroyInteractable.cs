@@ -1,16 +1,10 @@
 using UnityEngine;
 
-public class destroyInteractable : MonoBehaviour
+public class destroyInteractable : interActable
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public override void Interact(playerMovement playermovement)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        throw new System.NotImplementedException();
     }
 }
