@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.UI;
@@ -29,6 +30,9 @@ public class playerMovement : MonoBehaviour
 
     private GameObject currentTarget;
     public Image reticleImage;
+    private bool pressButton;
+
+    public static event Action<NPCData> OnDialogueReqested;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -131,10 +135,10 @@ public class playerMovement : MonoBehaviour
     void HandleInteract()
     {
         //if the player did not press interact this frame do nothing
-        if (!interactPressed) return;
+        if (!pressButton) return;
         //consume the input so one click only triggers one interactions
         //this changes next frame
-        interactPressed = false;
+        pressButton = false;
         if (currentTarget == null) return;
         Destroy(currentTarget);
         //clear target reference after destroying
@@ -166,12 +170,18 @@ public class playerMovement : MonoBehaviour
 
     public void onInteract(InputAction.CallbackContext context)
     {
-        if (context.performed) interactPressed = true;
+        if (context.performed) pressButton = true;
     }
 
     public void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Debug.Log("Character Collided with:" + hit.gameObject.name);
+    }
+
+    public void RequestDialoge(NPCData nPCData)
+    {
+        OnDialogueReqested?.Invoke(nPCData);
+
     }
 
 }
