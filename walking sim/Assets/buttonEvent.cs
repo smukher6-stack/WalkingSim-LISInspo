@@ -1,16 +1,17 @@
+using System;
+using TMPro;
 using UnityEngine;
 
 public class buttonEvent : MonoBehaviour
 {
+
+    public static event Action onButtonPressed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+   public void OnButtonPressed()
     {
-        
+        onButtonPressed?.Invoke();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  // action = delegate
+  // delegate= variable that stores functions
 }
