@@ -60,7 +60,7 @@ public class playerMovement : MonoBehaviour
 
         transform.Rotate(Vector3.up * yaw);
         pitch -= pitchDelta;
-        pitch = Mathf.Clamp(pitch, -90, -90);
+        pitch = Mathf.Clamp(pitch, -90, 90);
         cameraTransform.localRotation = Quaternion.Euler(pitch, 0,0);
     }
 
