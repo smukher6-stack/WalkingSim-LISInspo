@@ -118,6 +118,7 @@ public class dialogueManager : MonoBehaviour
         {
 
             Button button = Instantiate(choiceButtonPrefab, choicesContainer);
+            Debug.Log("instantiate button");
 
             TextMeshProUGUI tmp = button.GetComponentInChildren<TextMeshProUGUI>();
 
