@@ -41,8 +41,8 @@ public class playerMovement : MonoBehaviour
     {
         cC = GetComponent<CharacterController>();
 
-        //Cursor.lockState = CursorLockMode.Locked;
-       // Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         reticleImage = GameObject.Find("reticle").GetComponent<Image>();
 
