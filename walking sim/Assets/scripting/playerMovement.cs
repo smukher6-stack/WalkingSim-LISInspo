@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.UI;
@@ -12,8 +13,7 @@ public class playerMovement : MonoBehaviour
 
     bool isRunning;
     bool isJumping;
-    bool interactPressed;
-
+   
     public Transform cameraTransform;
     public float lookSensitivity = 1f;
 
@@ -27,8 +27,13 @@ public class playerMovement : MonoBehaviour
     private float pitch;
     private float yaw;
 
-    private GameObject currentTarget;
+
     public Image reticleImage;
+    private bool pressButton;
+    private interActable currentInteractable;
+    
+
+    public static event Action<NPCData> OnDialogueReqested;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -47,6 +52,8 @@ public class playerMovement : MonoBehaviour
     {
         handleMovement();
         handleLook();
+        CheckInteract();
+        HandleInteract();
     }
     private void handleLook()
     {
@@ -56,14 +63,17 @@ public class playerMovement : MonoBehaviour
 
         transform.Rotate(Vector3.up * yaw);
         pitch -= pitchDelta;
-        pitch = Mathf.Clamp(pitch, -90, -90);
+        pitch = Mathf.Clamp(pitch, -90, 90);
         cameraTransform.localRotation = Quaternion.Euler(pitch, 0,0);
+
+        
+
     }
 
     private void handleMovement()
     {
         bool grounded = cC.isGrounded;
-        Debug.Log("is grounded" + grounded);
+        
 
         if(grounded && verticalVelocity <= 0f)
         {
@@ -102,6 +112,44 @@ public class playerMovement : MonoBehaviour
         cC.Move((move + velocity) * Time.deltaTime);
     }
 
+    void CheckInteract()
+    {
+        //reset reticle image to normal color first
+        if (reticleImage != null) reticleImage.color = new Color(0, 0, 0, .7f);
+        //make a ray that goes straight out of the camera(center of screen)
+        //players eyesight
+        Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);
+       
+        //asking unity if it hit something within 3 units
+        //hit stores what we hit like the collider
+        
+        //if we hit something tagged interactable
+        if (Physics.Raycast(ray, out RaycastHit hit, 3f))
+        {
+            //store the object so we can destroy or do whatever when the player clicks
+            currentInteractable = hit.collider.GetComponentInParent<interActable>();
+            if (reticleImage != null && currentInteractable != null)
+            {
+                reticleImage.color = Color.aliceBlue;
+            }
+        }
+
+        Debug.DrawRay(cameraTransform.position, cameraTransform.forward * 3, Color.blue);
+    }
+
+    void HandleInteract()
+    {
+        //if the player did not press interact this frame do nothing
+        if (!pressButton) return;
+      
+        pressButton = false;
+        if (currentInteractable == null) return;
+        currentInteractable.Interact(this);
+        //clear target reference after destroying
+      
+
+    }
+
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
@@ -126,12 +174,13 @@ public class playerMovement : MonoBehaviour
 
     public void onInteract(InputAction.CallbackContext context)
     {
-        if (context.performed) interactPressed = true;
+        if (context.performed) pressButton = true;
+       
     }
-
-    public void OnControllerColliderHit(ControllerColliderHit hit)
+    public void RequestDialoge(NPCData nPCData)
     {
-        Debug.Log("Character Collided with:" + hit.gameObject.name);
+        OnDialogueReqested?.Invoke(nPCData);
+
     }
 
 }
