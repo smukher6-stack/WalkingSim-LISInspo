@@ -34,6 +34,8 @@ public class playerMovement : MonoBehaviour
     
 
     public static event Action<NPCData> OnDialogueReqested;
+    public static event Action<ObjectData> OnObjectDescripton;
+   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -181,6 +183,11 @@ public class playerMovement : MonoBehaviour
     {
         OnDialogueReqested?.Invoke(nPCData);
 
+    }
+
+    public void ObjectDescription(ObjectData data)
+    {
+        OnObjectDescripton?.Invoke(data);
     }
 
 }
