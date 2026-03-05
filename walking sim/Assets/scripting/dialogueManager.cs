@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
 using UnityEditor.VisionOS;
 using UnityEngine;
@@ -56,8 +57,10 @@ public class dialogueManager : MonoBehaviour
         if (nPCData == null)
         {
             Debug.Log("NPC DATA NULL");
+            return;
         }
 
+        if (playermovement != null) playermovement.SetControlIsLocked(true);
         currentNode = nPCData;
         lineIndex = 0;
         isTalking = true;
@@ -67,7 +70,7 @@ public class dialogueManager : MonoBehaviour
             dialoguePanel.SetActive(true);
 
         }
-
+        ShowLine();
     }
 
     bool hasChoices(NPCData node)
@@ -166,6 +169,7 @@ public class dialogueManager : MonoBehaviour
 
         currentNode = nextNode;
         lineIndex = 0;
+        ShowLine();
 
     }
 
@@ -196,9 +200,7 @@ public class dialogueManager : MonoBehaviour
         {
             return choicesContainer != null && choicesContainer.childCount > 0;
 
-            //bool showing = choicesContainer != null && choicesContainer.childCount > 0;
-            //Debug.Log(showing);
-            //return;*
+            
         }
 
         void ClearChoices()
@@ -216,6 +218,8 @@ public class dialogueManager : MonoBehaviour
         }
         void EndDialogue()
         {
+
+            if (playermovement != null) playermovement.SetControlIsLocked(false);
 
             isTalking = false;
             currentNode = null;

@@ -41,8 +41,8 @@ public class playerMovement : MonoBehaviour
     {
         cC = GetComponent<CharacterController>();
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+       // Cursor.visible = false;
 
         reticleImage = GameObject.Find("reticle").GetComponent<Image>();
 
@@ -183,6 +183,28 @@ public class playerMovement : MonoBehaviour
     {
         OnDialogueReqested?.Invoke(nPCData);
 
+    }
+
+    public void SetControlIsLocked(bool isLocked)
+    {
+
+        if (isLocked)
+        {
+
+            moveInput = Vector3.zero;
+            lookInput = Vector3.zero;
+            verticalVelocity = 0;
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            
+        }
+
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 
     public void ObjectDescription(ObjectData data)
