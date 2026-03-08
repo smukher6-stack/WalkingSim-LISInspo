@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
-using UnityEditor.VisionOS;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
