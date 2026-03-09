@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactable
   - manager
+  - puzzle piece
   layers:
   - Default
   - TransparentFX

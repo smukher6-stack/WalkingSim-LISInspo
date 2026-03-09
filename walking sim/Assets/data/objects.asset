@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13e5c541db94984fa0a420859741e4f, type: 3}
   m_Name: objects
   m_EditorClassIdentifier: Assembly-CSharp::ObjectData
-  objectName: 
-  objectDescription: 
+  objectName: Scissors
+  objectDescription: Weird. What would scissors be doing in the bathroom?
   lines: []
-  choices: []
+  choices:
+  - choiceX: Pick up
+    objectNode: {fileID: 0}
+  - choiceX: Leave it alone
+    objectNode: {fileID: 0}
   objectNode: {fileID: 0}
