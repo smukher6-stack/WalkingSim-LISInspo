@@ -172,8 +172,63 @@ PrefabInstance:
     - {fileID: 9133976822930858336, guid: eb8a09ef953baf34cae6d159e28e4cfb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7396083498659724754, guid: eb8a09ef953baf34cae6d159e28e4cfb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2524749091696429526}
+    - targetCorrespondingSourceObject: {fileID: 7396083498659724754, guid: eb8a09ef953baf34cae6d159e28e4cfb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2928631025610791536}
   m_SourcePrefab: {fileID: 100100000, guid: eb8a09ef953baf34cae6d159e28e4cfb, type: 3}
+--- !u!1 &11445586881572389 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7396083498659724754, guid: eb8a09ef953baf34cae6d159e28e4cfb, type: 3}
+  m_PrefabInstance: {fileID: 7389425617997911031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2524749091696429526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11445586881572389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75f46553d294e344819ad0c6bfe299c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryScript
+  item: {fileID: 11400000, guid: 372da751957b4d34d8299e48eeda0526, type: 2}
+  image: {fileID: 2928631025610791536}
+--- !u!114 &2928631025610791536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11445586881572389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!224 &3932041512703453774 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5773027164725754297, guid: eb8a09ef953baf34cae6d159e28e4cfb, type: 3}
