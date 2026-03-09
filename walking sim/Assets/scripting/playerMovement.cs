@@ -152,6 +152,8 @@ public class playerMovement : MonoBehaviour
 
     }
 
+
+
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();

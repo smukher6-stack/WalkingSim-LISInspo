@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using NUnit.Framework;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class puzzleItems : MonoBehaviour
@@ -14,6 +15,8 @@ public class puzzleItems : MonoBehaviour
 
     public void PickUpItem (puzzleScript.PuzzleItem item)
     {
+
+        Debug.Log("Picked up:" + item);
         clueList.Add(item);
     }
 
@@ -23,6 +26,28 @@ public class puzzleItems : MonoBehaviour
     
     }
 
+    public bool HasPiece(puzzleScript.PuzzleItem piece) { 
 
+        return clueList.Contains(piece);
+   
+    }
+
+    private void OnTriggerEnter(Collider collider)
+    { if (Input.GetKeyDown(KeyCode.R)) {
+
+            puzzleScript piece = collider.GetComponent<puzzleScript>();
+            if (piece != null)
+            {
+
+                PickUpItem(piece.GetPuzzleItem());
+                Destroy(piece.gameObject);
+
+
+            }
+
+
+        }
+        
+    }
 
 }

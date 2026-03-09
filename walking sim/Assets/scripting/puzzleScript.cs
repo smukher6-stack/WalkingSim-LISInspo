@@ -13,4 +13,6 @@ public class puzzleScript : MonoBehaviour
         PillBottle
 
     }
+
+    public PuzzleItem GetPuzzleItem () { return puzzleItem; }
 }

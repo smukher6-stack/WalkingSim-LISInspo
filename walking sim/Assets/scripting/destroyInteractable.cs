@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class destroyInteractable : interActable
 {
-    public bool hasItem = false;
+    public bool hasItem;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public override void Interact(playerMovement playermovement)
     {
