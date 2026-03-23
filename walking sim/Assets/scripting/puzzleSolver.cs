@@ -11,10 +11,11 @@ public class puzzleSolver : MonoBehaviour
         return puzzleItem;
     }
 
-    
-    public void solvedIt()
+
+    public bool solvedIt()
     {
 
-        Debug.Log("weird.");
+        
+        return true;
     }
 }

@@ -24,7 +24,7 @@ public class puzzleItems : MonoBehaviour
     {
 
         clueList.Remove(item);
-
+        Debug.Log("Solved");
     }
 
     public bool HasPiece(puzzleScript.PuzzleItem item)
@@ -62,6 +62,7 @@ public class puzzleItems : MonoBehaviour
             {
                 UseItem(puzzlesolver.GetPuzzleItem());
                 puzzlesolver.solvedIt();
+                
             }
         }
 
