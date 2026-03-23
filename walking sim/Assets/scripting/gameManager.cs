@@ -35,4 +35,10 @@ public class gameManager : MonoBehaviour
 
 
     }
+
+    public int storyBeats { get; private set; }
+    public void StoryIncrease()
+    {
+        storyBeats++;
+    }
 }

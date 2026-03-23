@@ -1,20 +1,20 @@
 using UnityEngine;
 using UnityEngine.Timeline;
+using UnityEngine.Events;
 
-[RequireComponent(typeof(BoxCollider))]
-[RequireComponent(typeof(SignalReceiver))]
 public class cutsceneScript : MonoBehaviour
 {
-    [SerializeField] public GameObject _cutsceneManager;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public UnityEvent continuePlot;
+    public GameObject ghostShenanigans;
+    private void OnTriggerEnter(Collider collision)
     {
-        
-    }
+        if (collision.CompareTag("storybeat"))
+        {
+            cutsceneScript.Instantiate(ghostShenanigans);
+            continuePlot.Invoke();
+            Debug.Log("Proceed");
+            Destroy(gameObject);
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

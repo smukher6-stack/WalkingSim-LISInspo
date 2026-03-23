@@ -151,6 +151,7 @@ public class descriptionManager : MonoBehaviour
         }
 
         EndDialogue();
+        
     }
 
     void Choose(ObjectData objectNode)

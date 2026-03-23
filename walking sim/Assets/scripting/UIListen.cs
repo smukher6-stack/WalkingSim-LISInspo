@@ -4,21 +4,18 @@ using UnityEngine;
 public class UIListen : MonoBehaviour
 {
 
-    public TextMeshProUGUI statusText;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void UpdateText()
-    {
+    [SerializeField] TextMeshProUGUI storyProgress;
 
-        statusText.text = "Button Pressed";
+    gameManager manager;
+   
+
+    private void Start()
+    {
+        manager = GameObject.FindGameObjectWithTag("game manager").GetComponent<gameManager>();
     }
 
-    public void OnEnable()
+    public void StoryProgress()
     {
-        buttonEvent.onButtonPressed += UpdateText;
-    }
-
-    public void OnDisable()
-    {
-        buttonEvent.onButtonPressed -= UpdateText;
+        storyProgress.text = manager.storyBeats.ToString();
     }
 }
