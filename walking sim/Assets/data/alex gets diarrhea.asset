@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13e5c541db94984fa0a420859741e4f, type: 3}
   m_Name: alex gets diarrhea
   m_EditorClassIdentifier: Assembly-CSharp::ObjectData
-  objectName: 
+  objectName: Naren
   objectDescription: 
-  lines: []
+  lines:
+  - hey, not to be a buzzkill, but i gotta take a shit.
   choices: []
-  objectNode: {fileID: 0}
+  objectNode: {fileID: 11400000, guid: 432b56831ebea464fbddf912c07e260d, type: 2}

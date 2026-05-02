@@ -18,4 +18,4 @@ MonoBehaviour:
   - A standard kitchen drawer. It's dusty as hell.
   - Where are the scissors?
   choices: []
-  objectNode: {fileID: 11400000, guid: 2c2c8d8acd7b5174e871e4fc2095123c, type: 2}
+  objectNode: {fileID: 11400000, guid: 3343498119b27c842a024d44473e977c, type: 2}

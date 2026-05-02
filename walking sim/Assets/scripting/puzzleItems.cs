@@ -44,7 +44,7 @@ public class puzzleItems : MonoBehaviour
         {
             Debug.Log("item acquitere");
             PickUpItem(item.GetPuzzleItem());
-            Destroy(item.gameObject);
+           
 
 
         }

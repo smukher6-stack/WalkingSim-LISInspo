@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e13e5c541db94984fa0a420859741e4f, type: 3}
-  m_Name: oh god alex has bowel problems
+  m_Name: New Object Data
   m_EditorClassIdentifier: Assembly-CSharp::ObjectData
-  objectName: Alex
+  objectName: Scissors
   objectDescription: 
   lines:
-  - hey, not to be a buzzkill, but I need to take a massive shit.
+  - What the hell are these doing in here?
+  - Is that... hair?
   choices: []
-  objectNode: {fileID: 11400000, guid: 27130dedfdf9ffc4a900222f913d881d, type: 2}
+  objectNode: {fileID: 0}
