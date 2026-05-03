@@ -1,9 +1,11 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 
+   
    
 {
     public static gameManager instance;
@@ -36,9 +38,4 @@ public class gameManager : MonoBehaviour
 
     }
 
-    public int storyBeats { get; private set; }
-    public void StoryIncrease()
-    {
-        storyBeats++;
-    }
 }
