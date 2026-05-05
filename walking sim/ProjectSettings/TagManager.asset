@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Interactable
+  - manager
+  - puzzle piece
   layers:
   - Default
   - TransparentFX
@@ -12,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - layer below ui that i hope works
   - 
   - 
   - 
