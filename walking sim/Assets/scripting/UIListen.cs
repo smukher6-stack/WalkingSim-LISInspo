@@ -14,8 +14,5 @@ public class UIListen : MonoBehaviour
         manager = GameObject.FindGameObjectWithTag("game manager").GetComponent<gameManager>();
     }
 
-    public void StoryProgress()
-    {
-        storyProgress.text = manager.storyBeats.ToString();
-    }
+   
 }
