@@ -709,19 +709,19 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: X:\miles mukherjee\repo 2\WalkingSim-LISInspo\walking sim\Assets
+  m_LastProjectPath: X:\miles mukherjee\WalkingSim-LISInspo\walking sim\Assets
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 19816
+    - m_Data: 19818
     m_LastClickedID:
-      m_Data: 19816
+      m_Data: 19818
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 19816
+    - m_Data: 19818
     - m_Data: 1000000000
     - m_Data: 2147483647
     m_RenameOverlay:
@@ -756,7 +756,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 19816
+    - m_Data: 19818
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
