@@ -41,7 +41,7 @@ public class descriptionManager : MonoBehaviour
     private void Update()
     {
         if (!isLooking) return;
-        if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
+        if (Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame)
         {
             if (ChoicesAreShowing()) return;
             Advance();

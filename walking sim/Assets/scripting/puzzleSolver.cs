@@ -14,7 +14,7 @@ public class puzzleSolver : MonoBehaviour
 
     public bool solvedIt()
     {
-
+        Debug.Log("SOLVED IT");
         
         return true;
     }

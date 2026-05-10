@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class puzzleItems : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class puzzleItems : MonoBehaviour
 
     public void PickUpItem(puzzleScript.PuzzleItem item)
     {
-
+        ObjectGrabber grabber = GetComponent<ObjectGrabber>();
+        grabber.TryGrab();
         Debug.Log("Picked up:" + item);
         clueList.Add(item);
     }
@@ -38,11 +40,14 @@ public class puzzleItems : MonoBehaviour
     {
         Debug.Log("trigger is working");
         //if(collider.)
+      
         puzzleScript item = collider.GetComponent<puzzleScript>();
         Debug.Log("component got");
         if (item != null)
         {
+           
             Debug.Log("item acquitere");
+            
             PickUpItem(item.GetPuzzleItem());
            
 

@@ -16,6 +16,8 @@ public class puzzleScript : MonoBehaviour
 
     public PuzzleItem GetPuzzleItem()
     {
+        ObjectGrabber grabber = GetComponent<ObjectGrabber>();
+        grabber.TryGrab();
         return puzzleItem;
     }
 }

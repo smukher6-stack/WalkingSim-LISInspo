@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 19034821}
   m_Layer: 0
   m_Name: vivi
-  m_TagString: Interactable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1158,7 +1158,7 @@ Transform:
   m_GameObject: {fileID: 767757051}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 2.7, z: -7.04}
+  m_LocalPosition: {x: 0.1, y: 2.7, z: -6.839}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1328,7 +1328,7 @@ MonoBehaviour:
     m_ActionName: 'Player/Interact[/Keyboard/e]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 961739754}
         m_TargetAssemblyTypeName: ObjectGrabber, Assembly-CSharp
         m_MethodName: OnGrabPerformed
         m_Mode: 0
@@ -1564,7 +1564,7 @@ GameObject:
   - component: {fileID: 961739752}
   - component: {fileID: 961739751}
   - component: {fileID: 961739750}
-  - component: {fileID: 961739755}
+  - component: {fileID: 961739754}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1691,7 +1691,7 @@ Transform:
   - {fileID: 1796732968}
   m_Father: {fileID: 767757057}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &961739755
+--- !u!114 &961739754
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1700,15 +1700,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 961739749}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a0ccdb11b8230049acf0836f5d0b0b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 89da12dda7b53114289b4e97704a95e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectGrabber
   grabRange: 4
   holdSmoothing: 15
   holdPoint: {fileID: 1796732968}
   throwForce: 15
-  heldObject: {fileID: 0}
-  isHolding: 0
 --- !u!1 &1093571792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,7 +1722,7 @@ GameObject:
   - component: {fileID: 1093571793}
   m_Layer: 0
   m_Name: alex
-  m_TagString: Interactable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2626,7 +2624,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 620, y: 554}
+  m_AnchoredPosition: {x: 721, y: -30}
   m_SizeDelta: {x: 100, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533962387
@@ -2704,19 +2702,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7059488439374195479, guid: 615d504087d45f54098f183bf78d1975, type: 3}
---- !u!114 &1674815021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5119281869171793336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49d0983986f8f6044985b7e5f5b40b7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::puzzleScript
-  puzzleItem: 0
 --- !u!1 &1697523426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2967,7 +2952,7 @@ Transform:
   m_GameObject: {fileID: 1796732967}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.29, y: 0, z: -1.15}
+  m_LocalPosition: {x: -0.651, y: 0.291, z: 0.938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3318,13 +3303,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2901103862318490894}
   serializedVersion: 2
-  m_LocalRotation: {x: 6.123234e-17, y: 1, z: -6.123234e-17, w: -6.123234e-17}
-  m_LocalPosition: {x: -0.062410098, y: 0, z: -0.023812344}
+  m_LocalRotation: {x: 6.5459494e-17, y: 0.071601085, z: 5.669088e-17, w: -0.99743336}
+  m_LocalPosition: {x: -0.0487, y: 0, z: -0.2338}
   m_LocalScale: {x: 0.0314338, y: 0.0314338, z: 0.0314338}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6304677979632167852}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -8.212, z: 0}
 --- !u!4 &543450652987059898
 Transform:
   m_ObjectHideFlags: 0
@@ -3365,9 +3350,13 @@ GameObject:
   - component: {fileID: 8390740832763465271}
   - component: {fileID: 6676244536103630717}
   - component: {fileID: 7891277594677105641}
+  - component: {fileID: 8390740832763465277}
   - component: {fileID: 8390740832763465273}
-  - component: {fileID: 8390740832763465274}
   - component: {fileID: 8390740832763465276}
+  - component: {fileID: 8390740832763465278}
+  - component: {fileID: 8390740832763465279}
+  - component: {fileID: 8390740832763465280}
+  - component: {fileID: 8390740832763465281}
   m_Layer: 0
   m_Name: scissors
   m_TagString: puzzle piece
@@ -4282,7 +4271,8 @@ GameObject:
   - component: {fileID: 228713701589105038}
   - component: {fileID: 1674815016}
   - component: {fileID: 1674815020}
-  - component: {fileID: 1674815021}
+  - component: {fileID: 7762877210802520805}
+  - component: {fileID: 7762877210802520806}
   m_Layer: 0
   m_Name: cabinet
   m_TagString: Interactable
@@ -5007,6 +4997,46 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5119281869171793336}
   m_Mesh: {fileID: 7059488439374195479, guid: 615d504087d45f54098f183bf78d1975, type: 3}
+--- !u!54 &7762877210802520805
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5119281869171793336}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &7762877210802520806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5119281869171793336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297d2d8b10323824e8ab505194c9b1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::puzzleSolver
+  puzzleItem: 0
 --- !u!4 &7777457684273465063
 Transform:
   m_ObjectHideFlags: 0
@@ -5261,13 +5291,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776810646038994188}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.491599, y: 3.655, z: -19.19837}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: -9.491599, y: 1.74, z: -19.19837}
   m_LocalScale: {x: 0.28405, y: 0.28405, z: 0.28405}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 180}
 --- !u!64 &8390740832763465273
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5290,19 +5320,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 9c1bf2c0a3c756a488930c44114688c1, type: 3}
---- !u!114 &8390740832763465274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776810646038994188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 297d2d8b10323824e8ab505194c9b1a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::puzzleSolver
-  puzzleItem: 0
 --- !u!114 &8390740832763465276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5316,6 +5333,93 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::objectInteract
   data: {fileID: 0}
+--- !u!114 &8390740832763465277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776810646038994188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 960284019708d1348b472c8c160468d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PhysicsObjects
+  mass: 1
+  drag: 0.5
+  angularDrag: 0.5
+  bounciness: 0
+  friction: 0.6
+  puzzleWeight: -1
+  isHeld: 0
+--- !u!54 &8390740832763465278
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776810646038994188}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &8390740832763465279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776810646038994188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89da12dda7b53114289b4e97704a95e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectGrabber
+  grabRange: 4
+  holdSmoothing: 15
+  holdPoint: {fileID: 1796732968}
+  throwForce: 15
+--- !u!114 &8390740832763465280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776810646038994188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d0983986f8f6044985b7e5f5b40b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::puzzleScript
+  puzzleItem: 0
+--- !u!114 &8390740832763465281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776810646038994188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdbba4d407f8ed34cafee63c55e0c0cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::puzzleItems
 --- !u!33 &8623146161364730425
 MeshFilter:
   m_ObjectHideFlags: 0
