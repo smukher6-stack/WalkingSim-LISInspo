@@ -60,7 +60,7 @@ public class dialogueManager : MonoBehaviour
             return;
         }
 
-        if (playermovement != null) playermovement.SetControlIsLocked(true);
+      playermovement.SetControlIsLocked(true);
         currentNode = nPCData;
         lineIndex = 0;
         isTalking = true;
