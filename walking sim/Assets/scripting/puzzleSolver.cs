@@ -3,7 +3,7 @@ using UnityEngine;
 public class puzzleSolver : MonoBehaviour
 {
     [SerializeField] private puzzleScript.PuzzleItem puzzleItem;
-
+   
     private playerMovement playermovement;
     private ObjectData data;
     public puzzleScript.PuzzleItem GetPuzzleItem()
@@ -11,10 +11,12 @@ public class puzzleSolver : MonoBehaviour
         return puzzleItem;
     }
 
+   
+
 
     public bool solvedIt()
     {
-
+        Debug.Log("SOLVED IT");
         
         return true;
     }
