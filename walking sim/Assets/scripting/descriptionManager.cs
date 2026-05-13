@@ -57,7 +57,7 @@ public class descriptionManager : MonoBehaviour
             return;
         }
 
-        if (playermovement != null) playermovement.SetControlIsLocked(true);
+      playermovement.SetControlIsLocked(true);
         currentNode = data;
         lineSort = 0;
         isLooking = true;
