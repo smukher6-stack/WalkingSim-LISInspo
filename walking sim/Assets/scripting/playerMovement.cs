@@ -35,6 +35,7 @@ public class playerMovement : MonoBehaviour
 
     public static event Action<NPCData> OnDialogueReqested;
     public static event Action<ObjectData> OnObjectDescripton;
+    public static event Action<DialogueTwo> DialogueRequested;
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -167,11 +168,11 @@ public class playerMovement : MonoBehaviour
         if (context.performed) pressButton = true;
        
     }
-    public void RequestDialoge(NPCData nPCData)
-    {
-        OnDialogueReqested?.Invoke(nPCData);
+    //public void RequestDialoge(NPCData nPCData)
+   // {
+     //   OnDialogueReqested?.Invoke(nPCData);
 
-    }
+   // }
 
     public void SetControlIsLocked(bool isLocked)
     {
@@ -200,6 +201,9 @@ public class playerMovement : MonoBehaviour
         OnObjectDescripton?.Invoke(data);
     }
 
-    
+    public void InkManager (DialogueTwo inkJSON)
+    {
+        DialogueRequested?.Invoke(inkJSON);
+    }
 
 }

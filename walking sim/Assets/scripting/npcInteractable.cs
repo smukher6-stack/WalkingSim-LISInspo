@@ -11,7 +11,7 @@ public class npcInteractable : interActable
 
             Debug.Log("npc has no data" + gameObject.name);
         }
-        playermovement.RequestDialoge(nPCData);
+        //playermovement.RequestDialoge(nPCData);
     }
 }
 
