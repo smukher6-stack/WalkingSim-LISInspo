@@ -48,7 +48,6 @@ public class DialogueManager : MonoBehaviour
             Advance();
         }
 
-        //keyboard.current.qKey
     }
 
     void StartDialogue(NPCData npcData)
@@ -60,7 +59,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         //this is where we would lock player camera and movement
-        if (player != null) player.SetControlIsLocked(true);
+        if (player != null) player.SetControlsLocked(true);
 
         //set state
         currentNode = npcData;
@@ -219,7 +218,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        if (player != null) player.SetControlIsLocked(false);
+        if (player != null) player.SetControlsLocked(false);
         isActive = false; //no longer in dialogue
         currentNode = null; //we dont have a node next (SO)
         lineIndex = 0;

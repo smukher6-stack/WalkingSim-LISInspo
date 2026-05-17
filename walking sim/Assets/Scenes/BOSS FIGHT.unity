@@ -416,6 +416,7 @@ MonoBehaviour:
   cameraTransform: {fileID: 451961574}
   lookSensitivity: 1
   reticleImage: {fileID: 701734465}
+  controlsLocked: 0
 --- !u!114 &402081550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,10 +566,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 94df129a-412f-402e-b4d8-4d1ebbd34fc9
     m_ActionName: 'Player/Interact[/Keyboard/e]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 62e1865a-2f3d-4a9b-88a4-b2021f2f592e
-    m_ActionName: 'Player/Grab[/Mouse/leftButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -2282,6 +2279,7 @@ MonoBehaviour:
   descriptionPanel: {fileID: 2114873240}
   objectName: {fileID: 1592738519}
   objectDescription: {fileID: 1846465644}
+  objectSprite: {fileID: 0}
   inventoryCheck: {fileID: 1268329139}
   objectButtonPrefab: {fileID: 9161965978408541838, guid: fa61e941737984343821926524e603d0, type: 3}
 --- !u!1 &2114873240

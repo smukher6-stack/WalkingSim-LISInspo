@@ -35,8 +35,10 @@ public class playerMovement : MonoBehaviour
 
     public static event Action<NPCData> OnDialogueReqested;
     public static event Action<ObjectData> OnObjectDescripton;
-    public static event Action<DialogueTwo> DialogueRequested;
-   
+    
+
+    public bool controlsLocked;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -168,42 +170,36 @@ public class playerMovement : MonoBehaviour
         if (context.performed) pressButton = true;
        
     }
-    public void RequestDialogue(NPCData nPCData)
+    public void RequestDialoge(NPCData nPCData)
    {
        OnDialogueReqested?.Invoke(nPCData);
 
     }
 
-    public void SetControlIsLocked(bool isLocked)
+    public void SetControlsLocked(bool locked)
     {
-
-        if (isLocked)
+        controlsLocked = locked;
+        if (locked)
         {
-
+            //stop movement instantly
             moveInput = Vector3.zero;
             lookInput = Vector3.zero;
             verticalVelocity = 0;
-            
+
             Cursor.lockState = CursorLockMode.None;
-            Debug.Log("the mouse has been freed");
             Cursor.visible = true;
         }
-
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
     }
-
     public void ObjectDescription(ObjectData data)
     {
         OnObjectDescripton?.Invoke(data);
     }
 
-    public void InkManager (DialogueTwo inkJSON)
-    {
-        DialogueRequested?.Invoke(inkJSON);
-    }
+    
 
 }

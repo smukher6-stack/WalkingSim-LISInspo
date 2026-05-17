@@ -17,8 +17,8 @@ MonoBehaviour:
   lines:
   - Who cares? It's half the fun! Naren, what do you think?
   choices:
-  - choiceX: Vivi
+  - choiceText: Vivi
     nextNode: {fileID: 11400000, guid: 2b3fa311d02687540b4bba84a9b863d9, type: 2}
-  - choiceX: Alex
+  - choiceText: Alex
     nextNode: {fileID: 11400000, guid: 56c8ba184a1441e4d80b489b7f602b1a, type: 2}
   nextNode: {fileID: 0}

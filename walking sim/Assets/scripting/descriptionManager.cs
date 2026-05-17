@@ -58,7 +58,7 @@ public class descriptionManager : MonoBehaviour
             return;
         }
 
-      playermovement.SetControlIsLocked(true);
+      playermovement.SetControlsLocked(true);
         currentNode = data;
         lineSort = 0;
         isLooking = true;
@@ -219,7 +219,7 @@ public class descriptionManager : MonoBehaviour
     void EndDialogue()
     {
 
-        if (playermovement != null) playermovement.SetControlIsLocked(false);
+        if (playermovement != null) playermovement.SetControlsLocked(false);
 
         isLooking = false;
         currentNode = null;
