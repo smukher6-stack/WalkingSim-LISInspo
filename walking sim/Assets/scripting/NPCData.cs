@@ -25,7 +25,7 @@ public class NPCData : ScriptableObject
 [System.Serializable]
 public class DialogueChoice
 {
-    public string choiceX;
+    public string choiceText;
     public NPCData nextNode;
 
 }

@@ -168,11 +168,11 @@ public class playerMovement : MonoBehaviour
         if (context.performed) pressButton = true;
        
     }
-    //public void RequestDialoge(NPCData nPCData)
-   // {
-     //   OnDialogueReqested?.Invoke(nPCData);
+    public void RequestDialogue(NPCData nPCData)
+   {
+       OnDialogueReqested?.Invoke(nPCData);
 
-   // }
+    }
 
     public void SetControlIsLocked(bool isLocked)
     {
