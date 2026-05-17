@@ -11,6 +11,7 @@ public class dialogueManager : MonoBehaviour
     public GameObject dialoguePanel;
     public TextMeshProUGUI displayName;
     public TextMeshProUGUI lineText;
+    public Image talkSprite;
 
     public Transform choicesContainer; // choice button spawn parent
     public Button choiceButtonPrefab;//prefabs yayyyy

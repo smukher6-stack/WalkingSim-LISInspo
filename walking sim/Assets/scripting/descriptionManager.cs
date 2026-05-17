@@ -10,6 +10,7 @@ public class descriptionManager : MonoBehaviour
     public GameObject descriptionPanel;
     public TextMeshProUGUI objectName;
     public TextMeshProUGUI objectDescription;
+    public Image objectSprite;
     private playerMovement playermovement;
     public Transform inventoryCheck; // choice button spawn parent
     public Button objectButtonPrefab;
