@@ -31,10 +31,11 @@ public class playerMovement : MonoBehaviour
     public Image reticleImage;
     private bool pressButton;
     private interActable currentInteractable;
-    
 
-    public static event Action<NPCData> OnDialogueReqested;
-    public static event Action<ObjectData> OnObjectDescripton;
+
+    // public static event Action<NPCData> OnDialogueReqested;
+    //public static event Action<ObjectData> OnObjectDescripton;
+    public static event Action<DialogueStoryAsset> OnDialogueRequested;
     
 
     public bool controlsLocked;
@@ -170,36 +171,11 @@ public class playerMovement : MonoBehaviour
         if (context.performed) pressButton = true;
        
     }
-    public void RequestDialoge(NPCData nPCData)
-   {
-       OnDialogueReqested?.Invoke(nPCData);
-
-    }
-
-    public void SetControlsLocked(bool locked)
+    public void RequestDialogue(DialogueStoryAsset ink)
     {
-        controlsLocked = locked;
-        if (locked)
-        {
-            //stop movement instantly
-            moveInput = Vector3.zero;
-            lookInput = Vector3.zero;
-            verticalVelocity = 0;
-
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-    }
-    public void ObjectDescription(ObjectData data)
-    {
-        OnObjectDescripton?.Invoke(data);
+        OnDialogueRequested?.Invoke(ink);
     }
 
-    
+
 
 }

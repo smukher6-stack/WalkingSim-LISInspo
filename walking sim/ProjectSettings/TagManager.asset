@@ -8,6 +8,7 @@ TagManager:
   - manager
   - puzzle piece
   - door
+  - diary
   layers:
   - Default
   - TransparentFX
