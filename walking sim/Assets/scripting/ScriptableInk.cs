@@ -9,6 +9,7 @@ public class DialogueStoryAsset : ScriptableObject
     public TextAsset inkJSONAsset;
 
     public string knotName;
+   
 
     [Header("Metadata")]
     public string storyTitle;

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d6e2f6005ec2b418cea030b955ff65, type: 3}
   m_Name: NewDialogueStory
   m_EditorClassIdentifier: Assembly-CSharp::DialogueStoryAsset
-  inkJSONAsset: {fileID: 0}
-  knotName: 
+  inkJSONAsset: {fileID: 4900000, guid: 117d7a49855f68b4ebe7232fce1e065b, type: 3}
+  knotName: STARTINGDIALOGUE
   storyTitle: 

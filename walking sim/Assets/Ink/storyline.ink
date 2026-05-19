@@ -5,9 +5,9 @@ VIVI: Can't believe we got into this place.
 VIVI: Or... I can. My dad's the realtor, after all!
 ALEX: Dude, isn't this breaking and entering?
 VIVI: Don't be such a buzzkill! Breaking and entering is part of the fun! Naren, what do you think?
-+NAREN: Oh hell yeah! It wouldn't be worth it without a little crime.
+*NAREN: Oh hell yeah! It wouldn't be worth it without a little crime.
     -> viviDialogue
-+NAREN: Dude, I think Alex is onto something. Maybe we should tread with caution.
+*NAREN: Dude, I think Alex is onto something. Maybe we should tread with caution.
     ->alexDialogue
 
 ===viviDialogue===
@@ -17,6 +17,8 @@ VIVI: That's the spirit! Come on, let's investigate.
 ===alexDialogue===
 VIVI: You're such a buzzkill, Naren. Let's see what this place has in store for us.
 ->DONE
+
+
 
 ===kitchen_drawer===
 A standard kitchen drawer. Where are the scissors?
@@ -34,9 +36,9 @@ NAREN: Wait a minute... is that hair?
 ===toilet===
 A toilet. The flush works. Nothing more to say about it, really.
 NAREN: Damn, they didn't clean it at all.
-+Tell Alex about the plumbing
+*Tell Alex about the plumbing
     ->YAYYIGETTOTAKEASHIT
-+Meh... what's the harm if he doesn't know?
+*Meh... what's the harm if he doesn't know?
     ->sayNothing
     
     ===YAYYIGETTOTAKEASHIT===
