@@ -13,12 +13,6 @@ public class DialogueStoryAsset : ScriptableObject
     [Header("Metadata")]
     public string storyTitle;
 
-    public void TriggerKnot(DialogueStoryAsset storyAsset)
-    {
-        if (DialogueManager.GetInstance() != null)
-        {
-            DialogueManager.GetInstance().StartStorySegment(knotName);
-        }
-    }
+  
 
 }

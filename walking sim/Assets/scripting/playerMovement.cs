@@ -33,8 +33,7 @@ public class playerMovement : MonoBehaviour
     private interActable currentInteractable;
 
 
-    // public static event Action<NPCData> OnDialogueReqested;
-    //public static event Action<ObjectData> OnObjectDescripton;
+    
     public static event Action<DialogueStoryAsset> OnDialogueRequested;
     
 
@@ -127,6 +126,11 @@ public class playerMovement : MonoBehaviour
             {
                 reticleImage.color = Color.aliceBlue;
             }
+
+            else if (currentInteractable == null)
+            {
+                reticleImage.color = new Color(0, 0, 0, .7f);
+            }
         }
 
         Debug.DrawRay(cameraTransform.position, cameraTransform.forward * 3, Color.blue);
@@ -140,8 +144,9 @@ public class playerMovement : MonoBehaviour
         pressButton = false;
         if (currentInteractable == null) return;
         currentInteractable.Interact(this);
+        Debug.Log("handle interact should be running");
         //clear target reference after destroying
-      
+
 
     }
 
