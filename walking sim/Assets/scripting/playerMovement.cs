@@ -1,9 +1,5 @@
 using System;
-<<<<<<< Updated upstream
 using System.Xml.Linq;
-=======
-using cherrydev;
->>>>>>> Stashed changes
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -33,18 +29,11 @@ public class playerMovement : MonoBehaviour
     public static event Action<NPCData> OnDialogueRequested;
     private interActable currentInteractable;
 
-<<<<<<< Updated upstream
     private bool isRunning;
     private bool isJumping;
 
     public bool controlsLocked;
 
-=======
-    public static event Action<StartDialogue> OnDialogueReqested;
-    
-   
-   
->>>>>>> Stashed changes
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -196,7 +185,6 @@ public class playerMovement : MonoBehaviour
         lookInput = context.ReadValue<Vector2>();
     }
 
-<<<<<<< Updated upstream
     public void OnJump(InputAction.CallbackContext context)
     {
         //if we are actually hitting the key is jumping equals true!
@@ -209,30 +197,12 @@ public class playerMovement : MonoBehaviour
     }
 
     public void OnInteract(InputAction.CallbackContext context)
-=======
-   
-    
-  
-    public void onInteract(InputAction.CallbackContext context)
->>>>>>> Stashed changes
     {
         if (context.performed) interactPressed = true;
         Debug.Log("OnInteract fired. performed=" + context.performed);
     }
-<<<<<<< Updated upstream
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
-=======
-    public void RequestDialogue(DialogNodeGraph dialogNodeGraph)
-    {
-        OnDialogueReqested?.Invoke(dialogNodeGraph);
-
-    }
-
-
-
-    public void SetControlIsLocked(bool isLocked)
->>>>>>> Stashed changes
     {
         //Debug.Log("CC Collided with: " + hit.gameObject.name);
     }
@@ -261,13 +231,4 @@ public class playerMovement : MonoBehaviour
             Cursor.visible = false;
         }
     }
-<<<<<<< Updated upstream
 }
-=======
-
-    
-
-   
-
-}
->>>>>>> Stashed changes
