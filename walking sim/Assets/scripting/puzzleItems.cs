@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 using Unity.VisualScripting;
+using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,8 +11,8 @@ public class puzzleItems : MonoBehaviour
     public event EventHandler OnNewPiece;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private List<puzzleScript.PuzzleItem> clueList;
-   
 
+    public ObjectGrabber grabber;
     private void Awake()
     {
         clueList = new List<puzzleScript.PuzzleItem>();
@@ -32,7 +33,7 @@ public class puzzleItems : MonoBehaviour
 
     public void UseItem(puzzleScript.PuzzleItem item)
     {
-
+        
         clueList.Remove(item);
         OnNewPiece?.Invoke(this, EventArgs.Empty);
         Debug.Log("Solved");
@@ -48,32 +49,43 @@ public class puzzleItems : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnCollisionEnter(Collision collision)
     {
+        ObjectGrabber grabber = GetComponent<ObjectGrabber>();
         Debug.Log("trigger is working");
-        //if(collider.)
-      
-        puzzleScript item = collider.GetComponent<puzzleScript>();
-        Debug.Log("component got");
-        if (item != null)
+
+       
         {
-           
-            Debug.Log("item acquitere");
+            puzzleScript item = GetComponent<puzzleScript>();
+            Debug.Log("component got");
+            if (grabber.isHolding && item != null)
+            {
+               
+                Debug.Log("item acquitere");
+
+                PickUpItem(item.GetPuzzleItem());
+              
+
+
+            }
+
+            if (grabber.isHolding && item == null)
+            {
+                Debug.Log("item is null");
+            }
+
+        }
+{
             
-            PickUpItem(item.GetPuzzleItem());
-           Destroy(item.gameObject);
 
 
         }
+       
+        
 
-        if (item == null)
-        {
-            Debug.Log("item is null");
-        }
-
-        puzzleSolver puzzlesolver = collider.GetComponent<puzzleSolver>();
+        puzzleSolver puzzlesolver = GetComponent<puzzleSolver>();
         if (puzzlesolver != null)
-        {
+        { 
 
             if (HasPiece(puzzlesolver.GetPuzzleItem()))
             {

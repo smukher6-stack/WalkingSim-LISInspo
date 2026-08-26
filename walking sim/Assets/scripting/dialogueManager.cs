@@ -20,6 +20,8 @@ public class DialogueManager : MonoBehaviour
     //lock the player movement and camera
     private playerMovement player;
 
+    private enum DialogueConditions { firstTalk, secondTalk, somethingHappened}
+
     private void Awake()
     {
         //start with dialogue hidden
@@ -42,7 +44,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (!isActive) return; //if no dialogue is active ignore
 
-        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame)
         {
             if (ChoicesAreShowing()) return; //block only when buttons exist
             Advance();
@@ -214,6 +216,13 @@ public class DialogueManager : MonoBehaviour
         {
             Destroy(choicesContainer.GetChild(i).gameObject);
         }
+    }
+
+    void SpecificChoices()
+    {
+
+
+
     }
 
     void EndDialogue()
