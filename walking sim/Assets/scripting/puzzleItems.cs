@@ -12,7 +12,7 @@ public class puzzleItems : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private List<puzzleScript.PuzzleItem> clueList;
 
-    public ObjectGrabber grabber;
+   
     private void Awake()
     {
         clueList = new List<puzzleScript.PuzzleItem>();
@@ -49,27 +49,27 @@ public class puzzleItems : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        ObjectGrabber grabber = GetComponent<ObjectGrabber>();
+        
         Debug.Log("trigger is working");
 
        
         {
             puzzleScript item = GetComponent<puzzleScript>();
             Debug.Log("component got");
-            if (grabber.isHolding && item != null)
+            if (item != null)
             {
                
                 Debug.Log("item acquitere");
 
                 PickUpItem(item.GetPuzzleItem());
-              
+                Destroy(item.gameObject);
 
 
             }
 
-            if (grabber.isHolding && item == null)
+            if (item == null)
             {
                 Debug.Log("item is null");
             }
@@ -94,6 +94,8 @@ public class puzzleItems : MonoBehaviour
                 
             }
         }
+
+        
 
 
 
