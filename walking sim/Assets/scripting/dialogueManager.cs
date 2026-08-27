@@ -21,6 +21,7 @@ public class DialogueManager : MonoBehaviour
     private playerMovement player;
 
     private enum DialogueConditions { firstTalk, secondTalk, somethingHappened}
+    private DialogueConditions dialogueConditions = DialogueConditions.firstTalk;
 
     private void Awake()
     {
